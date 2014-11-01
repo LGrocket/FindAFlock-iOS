@@ -31,6 +31,7 @@
 		25ECBAA61A057A300002514B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25ECBAA51A057A300002514B /* StoreKit.framework */; };
 		25ECBAA81A057A350002514B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25ECBAA71A057A350002514B /* SystemConfiguration.framework */; };
 		25ECBAAB1A057BF50002514B /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25ECBAAA1A057BF50002514B /* FacebookSDK.framework */; };
+		25ECBAAE1A0581DA0002514B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25ECBAAD1A0581DA0002514B /* LoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,8 @@
 		25ECBAA51A057A300002514B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		25ECBAA71A057A350002514B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		25ECBAAA1A057BF50002514B /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		25ECBAAC1A0581DA0002514B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		25ECBAAD1A0581DA0002514B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +143,8 @@
 				25ECBA6C1A0578070002514B /* SecondViewController.h */,
 				25ECBA6D1A0578070002514B /* SecondViewController.m */,
 				25ECBA6F1A0578070002514B /* Main.storyboard */,
+				25ECBAAC1A0581DA0002514B /* LoginViewController.h */,
+				25ECBAAD1A0581DA0002514B /* LoginViewController.m */,
 				25ECBA721A0578070002514B /* Images.xcassets */,
 				25ECBA741A0578070002514B /* LaunchScreen.xib */,
 				25ECBA621A0578070002514B /* Supporting Files */,
@@ -300,6 +305,7 @@
 				25ECBA681A0578070002514B /* AppDelegate.m in Sources */,
 				25ECBA6B1A0578070002514B /* FirstViewController.m in Sources */,
 				25ECBA651A0578070002514B /* main.m in Sources */,
+				25ECBAAE1A0581DA0002514B /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

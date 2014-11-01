@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  LoginViewController.h
 //  FindAFlock
 //
 //  Created by Lucas Rockett Gutterman on 11/1/14.
@@ -7,10 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
-
-@interface FirstViewController : UIViewController
-
+@interface LoginViewController : UIViewController
 
 @end
-
