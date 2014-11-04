@@ -1,5 +1,5 @@
 //
-//  LoginViewController.h
+//  FlightsPageViewController.h
 //  FindAFlock
 //
 //  Created by Lucas Rockett Gutterman on 11/1/14.
@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <Parse/Parse.h>
 
-@interface LoginViewController : UIViewController
+@interface FlightsPageViewController : UIPageViewController
 
 @end
