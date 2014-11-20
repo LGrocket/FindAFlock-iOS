@@ -30,6 +30,13 @@
     logInController.delegate = logInController;
     [self presentViewController:logInController animated:YES completion:nil];
     
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    self.refreshControl.backgroundColor = [UIColor blueColor];
+    self.refreshControl.tintColor = [UIColor whiteColor];
+    [self.refreshControl addTarget:self
+                            action:@selector(fetchData)
+                  forControlEvents:UIControlEventValueChanged];
+    
     [self fetchData];
     
     // Uncomment the following line to preserve selection between presentations.
@@ -39,9 +46,8 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (void)viewDidAppear {
+- (void)viewWillAppear {
     [self fetchData];
-    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -80,6 +86,8 @@
                 [self.friendsFlights addObject:currFlight];
             }
             [self.tableView reloadData];
+            [self.refreshControl endRefreshing];
+            NSLog(@"Reloaded data");
         } else {
             NSLog(@"Error: %@ %@", error, [error userInfo]);
         }

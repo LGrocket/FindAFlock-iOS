@@ -7,6 +7,7 @@
 //
 
 #import "NewFlightsTableViewController.h"
+#import "FriendsFlightsContentController.h"
 #import <Parse/Parse.h>
 
 @interface NewFlightsTableViewController ()
@@ -56,10 +57,10 @@
     }
     //Final Soar Section
     if (indexPath.section == 2) {
-        if ( [[tableView cellForRowAtIndexPath:indexPath].textLabel.text isEqual: @"Friends"] )
-            self.privacy = 0;
-        else
+        if ( [[tableView cellForRowAtIndexPath:indexPath].reuseIdentifier isEqualToString:@"Friends"] )
             self.privacy = 1;
+        else
+            self.privacy = 0;
         
         //Do input validation here
         
@@ -79,7 +80,7 @@
                 break;
         }
         newFlight[@"type"] = ftype;
-        newFlight[@"privacy"] = (self.privacy) ? @"friends" : @"local";
+        newFlight[@"privacy"] = (self.privacy) ? @"friends" : @"locals";
         UITextField *locationField = (UITextField *)[tableView viewWithTag:1].subviews[0];
         newFlight[@"location"] = locationField.text;
         
@@ -143,12 +144,13 @@
 
 
 #pragma mark - Navigation
-/*
+
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    [[segue destinationViewController] fetchData];
 }
-*/
 
 @end

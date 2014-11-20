@@ -144,7 +144,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Soar with" id="x3d-hn-ebS">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationLevel="1" indentationWidth="10" id="UV1-ea-bQd">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationLevel="1" indentationWidth="10" reuseIdentifier="Friends" id="UV1-ea-bQd">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UV1-ea-bQd" id="Gy4-fL-gM8">
@@ -165,7 +165,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="BqP-jX-32I">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Locals" id="BqP-jX-32I">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BqP-jX-32I" id="FU8-La-7iD">
@@ -367,7 +367,13 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Item" id="AKY-sj-fLi"/>
-                    <navigationItem key="navigationItem" title="Local Flights" id="TAM-bY-SRj"/>
+                    <navigationItem key="navigationItem" title="Local Flights" id="TAM-bY-SRj">
+                        <barButtonItem key="rightBarButtonItem" tag="1" title="+ New Flight" id="4Ns-2J-HfM">
+                            <connections>
+                                <action selector="addNewFlight:" destination="JdM-1E-va8" id="xej-9B-1ti"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3MP-6u-OmO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -23,10 +23,31 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    self.refreshControl.backgroundColor = [UIColor blueColor];
+    self.refreshControl.tintColor = [UIColor whiteColor];
+    [self.refreshControl addTarget:self
+                            action:@selector(fetchData)
+                  forControlEvents:UIControlEventValueChanged];
+    
+    [self fetchData];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)addNewFlight:(id)sender {
+    UIViewController *newFlights = [self.storyboard instantiateViewControllerWithIdentifier:@"newFlightsView"];
+    [self.navigationController pushViewController:newFlights animated:YES];
+}
+
+- (void)fetchData {
     [PFGeoPoint geoPointForCurrentLocationInBackground:^(PFGeoPoint *geoPoint, NSError *error) {
         if (!error) {
             PFQuery *query = [PFQuery queryWithClassName:@"Flight"];
-            [query whereKey:@"privacy" equalTo:@"friends"]; //TODO: Should be local
+            [query whereKey:@"privacy" equalTo:@"locals"];
             [query whereKey:@"createdGeoLocation" nearGeoPoint:geoPoint withinMiles:30.0];
             query.limit = 20;
             [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -39,24 +60,15 @@
                         currFlight.type = object[@"type"];
                         [self.localFlights addObject:currFlight];
                         [self.tableView reloadData];
+                        [self.refreshControl endRefreshing];
                     }
                 } else {
                     NSLog(@"Error: %@ %@", error, [error userInfo]);
                 }
             }];
-
+            
         }
     }];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (IBAction)addNewFlight:(id)sender {
-    UIViewController *newFlights = [self.storyboard instantiateViewControllerWithIdentifier:@"newFlightsView"];
-    [self.navigationController pushViewController:newFlights animated:YES];
 }
 
 #pragma mark - Table view data source

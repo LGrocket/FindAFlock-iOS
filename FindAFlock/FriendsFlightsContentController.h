@@ -10,4 +10,6 @@
 
 @interface FriendsFlightsContentController : UITableViewController
 
+- (void)fetchData;
+
 @end
