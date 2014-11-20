@@ -14,6 +14,7 @@
 @property NSIndexPath *lastSelected;
 @property NSString *flightType;
 @property int privacy;
+@property (nonatomic, strong) PFGeoPoint *userLocation;
 
 @end
 
@@ -28,7 +29,6 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     //self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
 
 }
 
@@ -82,9 +82,20 @@
         newFlight[@"privacy"] = (self.privacy) ? @"friends" : @"local";
         UITextField *locationField = (UITextField *)[tableView viewWithTag:1].subviews[0];
         newFlight[@"location"] = locationField.text;
-        [newFlight saveInBackground];
-        [self.navigationController popViewControllerAnimated:true];
         
+        [PFGeoPoint geoPointForCurrentLocationInBackground:^(PFGeoPoint *geoPoint, NSError *error) {
+            if (!error) {
+                NSLog(@"User Location determined");
+                newFlight[@"createdGeoLocation"] = geoPoint;
+                [newFlight saveInBackground];
+            }
+            else {
+                NSLog(error);
+            }
+            
+        }];
+
+        [self.navigationController popViewControllerAnimated:true];
     }
 
 }
@@ -130,9 +141,9 @@
 }
 */
 
-/*
-#pragma mark - Navigation
 
+#pragma mark - Navigation
+/*
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].

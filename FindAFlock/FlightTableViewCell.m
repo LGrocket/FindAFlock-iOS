@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Lucas Gutterman. All rights reserved.
 //
 
-#import "FriendFlightsTableViewCell.h"
+#import "FlightTableViewCell.h"
 
-@implementation FriendFlightsTableViewCell
+@implementation FlightTableViewCell
 
 - (void)awakeFromNib {
     // Initialization code

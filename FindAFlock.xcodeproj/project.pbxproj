@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2534C63E1A1DB5C400636835 /* LocalFlightsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2534C63D1A1DB5C400636835 /* LocalFlightsViewController.m */; };
 		257ECCF61A0864A60006C78D /* NewFlightsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 257ECCF51A0864A60006C78D /* NewFlightsTableViewController.m */; };
 		259A5E791A0837F000CF64A0 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 259A5E561A0837F000CF64A0 /* Contents.json */; };
 		259A5E7A1A0837F000CF64A0 /* group-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 259A5E571A0837F000CF64A0 /* group-25.png */; };
@@ -27,7 +28,7 @@
 		259A5E8F1A0837F000CF64A0 /* twitter-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 259A5E751A0837F000CF64A0 /* twitter-25.png */; };
 		259A5E931A0837FB00CF64A0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 259A5E921A0837FB00CF64A0 /* Images.xcassets */; };
 		259F99D01A0891D30047A804 /* FlightsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 259F99CF1A0891D30047A804 /* FlightsModel.m */; };
-		259F99D41A08A04E0047A804 /* FriendFlightsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 259F99D31A08A04E0047A804 /* FriendFlightsTableViewCell.m */; };
+		259F99D41A08A04E0047A804 /* FlightTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 259F99D31A08A04E0047A804 /* FlightTableViewCell.m */; };
 		259F99D71A08C9C20047A804 /* CustomLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 259F99D61A08C9C20047A804 /* CustomLoginViewController.m */; };
 		259F99D91A08D81E0047A804 /* FindAFlock-Futura-Light-fb.png in Resources */ = {isa = PBXBuildFile; fileRef = 259F99D81A08D81E0047A804 /* FindAFlock-Futura-Light-fb.png */; };
 		25B209311A0822DF00A05800 /* FriendsFlightsContentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B209301A0822DF00A05800 /* FriendsFlightsContentController.m */; };
@@ -65,6 +66,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2534C63C1A1DB5C400636835 /* LocalFlightsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalFlightsViewController.h; sourceTree = "<group>"; };
+		2534C63D1A1DB5C400636835 /* LocalFlightsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalFlightsViewController.m; sourceTree = "<group>"; };
 		257ECCF41A0864A60006C78D /* NewFlightsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewFlightsTableViewController.h; sourceTree = "<group>"; };
 		257ECCF51A0864A60006C78D /* NewFlightsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewFlightsTableViewController.m; sourceTree = "<group>"; };
 		259A5E561A0837F000CF64A0 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
@@ -87,8 +90,8 @@
 		259A5E921A0837FB00CF64A0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
 		259F99CF1A0891D30047A804 /* FlightsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlightsModel.m; sourceTree = "<group>"; };
 		259F99D11A0893030047A804 /* FlightsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlightsModel.h; sourceTree = "<group>"; };
-		259F99D21A08A04E0047A804 /* FriendFlightsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendFlightsTableViewCell.h; sourceTree = "<group>"; };
-		259F99D31A08A04E0047A804 /* FriendFlightsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendFlightsTableViewCell.m; sourceTree = "<group>"; };
+		259F99D21A08A04E0047A804 /* FlightTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlightTableViewCell.h; sourceTree = "<group>"; };
+		259F99D31A08A04E0047A804 /* FlightTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlightTableViewCell.m; sourceTree = "<group>"; };
 		259F99D51A08C9C20047A804 /* CustomLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomLoginViewController.h; sourceTree = "<group>"; };
 		259F99D61A08C9C20047A804 /* CustomLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomLoginViewController.m; sourceTree = "<group>"; };
 		259F99D81A08D81E0047A804 /* FindAFlock-Futura-Light-fb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FindAFlock-Futura-Light-fb.png"; sourceTree = "<group>"; };
@@ -268,6 +271,8 @@
 			children = (
 				257ECCF41A0864A60006C78D /* NewFlightsTableViewController.h */,
 				257ECCF51A0864A60006C78D /* NewFlightsTableViewController.m */,
+				2534C63C1A1DB5C400636835 /* LocalFlightsViewController.h */,
+				2534C63D1A1DB5C400636835 /* LocalFlightsViewController.m */,
 				259F99CF1A0891D30047A804 /* FlightsModel.m */,
 				259F99D11A0893030047A804 /* FlightsModel.h */,
 				25ECBA661A0578070002514B /* AppDelegate.h */,
@@ -275,8 +280,8 @@
 				25ECBA6F1A0578070002514B /* Main.storyboard */,
 				259F99D51A08C9C20047A804 /* CustomLoginViewController.h */,
 				259F99D61A08C9C20047A804 /* CustomLoginViewController.m */,
-				259F99D21A08A04E0047A804 /* FriendFlightsTableViewCell.h */,
-				259F99D31A08A04E0047A804 /* FriendFlightsTableViewCell.m */,
+				259F99D21A08A04E0047A804 /* FlightTableViewCell.h */,
+				259F99D31A08A04E0047A804 /* FlightTableViewCell.m */,
 				25B2092F1A0822DF00A05800 /* FriendsFlightsContentController.h */,
 				25B209301A0822DF00A05800 /* FriendsFlightsContentController.m */,
 				25ECBA741A0578070002514B /* LaunchScreen.xib */,
@@ -454,8 +459,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				259F99D41A08A04E0047A804 /* FriendFlightsTableViewCell.m in Sources */,
+				259F99D41A08A04E0047A804 /* FlightTableViewCell.m in Sources */,
 				259F99D71A08C9C20047A804 /* CustomLoginViewController.m in Sources */,
+				2534C63E1A1DB5C400636835 /* LocalFlightsViewController.m in Sources */,
 				25ECBA681A0578070002514B /* AppDelegate.m in Sources */,
 				25B209311A0822DF00A05800 /* FriendsFlightsContentController.m in Sources */,
 				257ECCF61A0864A60006C78D /* NewFlightsTableViewController.m in Sources */,

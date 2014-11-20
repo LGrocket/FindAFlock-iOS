@@ -8,7 +8,7 @@
 
 #import "FriendsFlightsContentController.h"
 #import "FlightsModel.h"
-#import "FriendFlightsTableViewCell.h"
+#import "FlightTableViewCell.h"
 #import <Parse/Parse.h>
 #import "CustomLoginViewController.h"
 
@@ -29,30 +29,19 @@
     logInController.fields = PFLogInFieldsFacebook;
     logInController.delegate = logInController;
     [self presentViewController:logInController animated:YES completion:nil];
-
-    PFQuery *query = [PFQuery queryWithClassName:@"Flight"];
-    [query whereKey:@"privacy" equalTo:@"friends"];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error) {
-            self.friendsFlights = [NSMutableArray new];
-            NSLog(@"Successfully retrieved %lu flights.", (unsigned long)objects.count);
-            for (PFObject *object in objects) {
-                Flight *currFlight = [Flight new];
-                currFlight.location = object[@"location"];
-                currFlight.type = object[@"type"];
-                [self.friendsFlights addObject:currFlight];
-            }
-        } else {
-            NSLog(@"Error: %@ %@", error, [error userInfo]);
-        }
-    }];
-
+    
+    [self fetchData];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)viewDidAppear {
+    [self fetchData];
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -77,11 +66,31 @@
     return [self.friendsFlights count];
 }
 
+- (void)fetchData {
+    PFQuery *query = [PFQuery queryWithClassName:@"Flight"];
+    [query whereKey:@"privacy" equalTo:@"friends"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            self.friendsFlights = [NSMutableArray new];
+            NSLog(@"Successfully retrieved %lu flights.", (unsigned long)objects.count);
+            for (PFObject *object in objects) {
+                Flight *currFlight = [Flight new];
+                currFlight.location = object[@"location"];
+                currFlight.type = object[@"type"];
+                [self.friendsFlights addObject:currFlight];
+            }
+            [self.tableView reloadData];
+        } else {
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    FriendFlightsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FriendFlights" forIndexPath:indexPath];
+    FlightTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FriendFlights" forIndexPath:indexPath];
     
     if (cell == nil) {
-        cell = [[FriendFlightsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault  reuseIdentifier:@"FriendFlights"];
+        cell = [[FlightTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault  reuseIdentifier:@"FriendFlights"];
     }
     
     Flight *flight = [self.friendsFlights objectAtIndex:indexPath.row];

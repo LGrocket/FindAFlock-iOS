@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -225,7 +225,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="FriendFlights" id="zt8-Ec-Uzv" customClass="FriendFlightsTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="FriendFlights" id="zt8-Ec-Uzv" customClass="FlightTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zt8-Ec-Uzv" id="x1a-k7-2v3">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -309,17 +309,56 @@
         <!--Local Flights Content Controller-->
         <scene sceneID="zet-2K-BjH">
             <objects>
-                <tableViewController id="JdM-1E-va8" userLabel="Local Flights Content Controller" sceneMemberID="viewController">
+                <tableViewController id="JdM-1E-va8" userLabel="Local Flights Content Controller" customClass="LocalFlightsViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="9zb-CF-sL2">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="xSk-fk-tAc">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="LocalFlights" id="1jQ-Fj-vV9" customClass="FlightTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xSk-fk-tAc" id="61u-0Q-D6V">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1jQ-Fj-vV9" id="iLQ-RS-vFd">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8v-tc-1LH">
+                                            <rect key="frame" x="60" y="11" width="36" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="27W-ZF-5F4">
+                                            <rect key="frame" x="366" y="11" width="193" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="193" id="17J-0R-Q3D"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="daV-6I-3hI">
+                                            <rect key="frame" x="8" y="12" width="20" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="20" id="Hty-TC-n00"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="27W-ZF-5F4" firstAttribute="firstBaseline" secondItem="r8v-tc-1LH" secondAttribute="firstBaseline" id="27s-y8-Th7"/>
+                                        <constraint firstItem="r8v-tc-1LH" firstAttribute="leading" secondItem="daV-6I-3hI" secondAttribute="trailing" constant="32" id="6pg-nV-mnQ"/>
+                                        <constraint firstItem="daV-6I-3hI" firstAttribute="top" secondItem="iLQ-RS-vFd" secondAttribute="top" constant="12" id="B2E-rr-Nb6"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="daV-6I-3hI" secondAttribute="bottom" constant="4" id="Ka7-vF-U2V"/>
+                                        <constraint firstItem="daV-6I-3hI" firstAttribute="leading" secondItem="iLQ-RS-vFd" secondAttribute="leadingMargin" id="O6g-bT-RBm"/>
+                                        <constraint firstItem="r8v-tc-1LH" firstAttribute="baseline" secondItem="27W-ZF-5F4" secondAttribute="baseline" id="WGc-9p-iyu"/>
+                                        <constraint firstItem="r8v-tc-1LH" firstAttribute="top" secondItem="iLQ-RS-vFd" secondAttribute="topMargin" constant="3" id="sLw-CP-Tko"/>
+                                        <constraint firstItem="27W-ZF-5F4" firstAttribute="centerY" secondItem="iLQ-RS-vFd" secondAttribute="centerY" id="wg1-qY-Sqa"/>
+                                        <constraint firstAttribute="trailing" secondItem="27W-ZF-5F4" secondAttribute="trailing" constant="8" id="yYP-7B-NmC"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="locationLabel" destination="27W-ZF-5F4" id="shP-tv-EOa"/>
+                                    <outlet property="typeIcon" destination="daV-6I-3hI" id="aB5-3J-UeZ"/>
+                                    <outlet property="typeLabel" destination="r8v-tc-1LH" id="SUF-D2-2Cf"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

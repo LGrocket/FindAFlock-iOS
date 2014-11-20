@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FriendFlightsTableViewCell : UITableViewCell
+@interface FlightTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *typeLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *typeIcon;
