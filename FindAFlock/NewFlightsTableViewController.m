@@ -83,6 +83,8 @@
         newFlight[@"privacy"] = (self.privacy) ? @"friends" : @"locals";
         UITextField *locationField = (UITextField *)[tableView viewWithTag:1].subviews[0];
         newFlight[@"location"] = locationField.text;
+        newFlight[@"creator"] = [PFUser currentUser].username;
+        [newFlight addObject:[PFUser currentUser].username forKey:@"users"];
         
         [PFGeoPoint geoPointForCurrentLocationInBackground:^(PFGeoPoint *geoPoint, NSError *error) {
             if (!error) {

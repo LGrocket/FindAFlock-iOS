@@ -11,6 +11,7 @@
 #import "FlightTableViewCell.h"
 #import <Parse/Parse.h>
 #import "CustomLoginViewController.h"
+#import "FlightDetailViewController.h"
 
 @interface FriendsFlightsContentController ()
 
@@ -83,6 +84,7 @@
                 Flight *currFlight = [Flight new];
                 currFlight.location = object[@"location"];
                 currFlight.type = object[@"type"];
+                currFlight.parseID = object.objectId;
                 [self.friendsFlights addObject:currFlight];
             }
             [self.tableView reloadData];
@@ -149,14 +151,18 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([[segue identifier] isEqualToString:@"ShowDetail"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        Flight *selectedFlight = self.friendsFlights[indexPath.row];
+        [[segue destinationViewController] setDetailItem:selectedFlight];
+    }
 }
-*/
 
 @end

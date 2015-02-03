@@ -7,6 +7,7 @@
 //
 
 #import "CustomLoginViewController.h"
+#import <ParseFacebookUtils/PFFacebookUtils.h>
 
 
 @interface CustomLoginViewController ()
@@ -28,8 +29,16 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)logInViewController:(PFLogInViewController *)controller
-               didLogInUser:(PFUser *)user {
+- (void)logInViewController:(PFLogInViewController *)controller didLogInUser:(PFUser *)user {
+    if (user) {
+        [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+            if (!error) {
+                // Store the current user's Facebook ID on the user
+                [[PFUser currentUser] setObject:[result objectForKey:@"id"] forKey:@"fbId"];
+                [[PFUser currentUser] saveInBackground];
+            }
+        }];
+    }
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

@@ -9,10 +9,16 @@
 #ifndef FindAFlock_FlightsModel_h
 #define FindAFlock_FlightsModel_h
 
+#import <Parse/Parse.h>
+
 @interface Flight : NSObject
 
+@property NSString *parseID;
 @property NSString *location;
 @property NSString *type;
+@property NSMutableArray *users;
+
+- (void)toggleUserJoins:(UIViewController *)caller;
 
 @end
 

@@ -8,7 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		2534C63E1A1DB5C400636835 /* LocalFlightsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2534C63D1A1DB5C400636835 /* LocalFlightsViewController.m */; };
+		2534C6411A1DC7CD00636835 /* FlightDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2534C6401A1DC7CD00636835 /* FlightDetailViewController.m */; };
+		256790B91A2D680700E0189C /* MeFriendsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 256790B81A2D680700E0189C /* MeFriendsCollectionViewCell.m */; };
 		257ECCF61A0864A60006C78D /* NewFlightsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 257ECCF51A0864A60006C78D /* NewFlightsTableViewController.m */; };
+		258B0AC11A2D166D002C2E95 /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 258B0AC01A2D166D002C2E95 /* MeViewController.m */; };
+		258B0AC41A2D1C8A002C2E95 /* MeFlightsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 258B0AC31A2D1C8A002C2E95 /* MeFlightsTableViewController.m */; };
 		259A5E791A0837F000CF64A0 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 259A5E561A0837F000CF64A0 /* Contents.json */; };
 		259A5E7A1A0837F000CF64A0 /* group-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 259A5E571A0837F000CF64A0 /* group-25.png */; };
 		259A5E7B1A0837F000CF64A0 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 259A5E581A0837F000CF64A0 /* Contents.json */; };
@@ -53,6 +57,7 @@
 		25ECBAA61A057A300002514B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25ECBAA51A057A300002514B /* StoreKit.framework */; };
 		25ECBAA81A057A350002514B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25ECBAA71A057A350002514B /* SystemConfiguration.framework */; };
 		25ECBAAB1A057BF50002514B /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25ECBAAA1A057BF50002514B /* FacebookSDK.framework */; };
+		25F1A4961A2D5290009FD39A /* MeFriendsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F1A4951A2D5290009FD39A /* MeFriendsCollectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,8 +73,16 @@
 /* Begin PBXFileReference section */
 		2534C63C1A1DB5C400636835 /* LocalFlightsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalFlightsViewController.h; sourceTree = "<group>"; };
 		2534C63D1A1DB5C400636835 /* LocalFlightsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalFlightsViewController.m; sourceTree = "<group>"; };
+		2534C63F1A1DC7CD00636835 /* FlightDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlightDetailViewController.h; sourceTree = "<group>"; };
+		2534C6401A1DC7CD00636835 /* FlightDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlightDetailViewController.m; sourceTree = "<group>"; };
+		256790B71A2D680700E0189C /* MeFriendsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeFriendsCollectionViewCell.h; sourceTree = "<group>"; };
+		256790B81A2D680700E0189C /* MeFriendsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeFriendsCollectionViewCell.m; sourceTree = "<group>"; };
 		257ECCF41A0864A60006C78D /* NewFlightsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewFlightsTableViewController.h; sourceTree = "<group>"; };
 		257ECCF51A0864A60006C78D /* NewFlightsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewFlightsTableViewController.m; sourceTree = "<group>"; };
+		258B0ABF1A2D166D002C2E95 /* MeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeViewController.h; sourceTree = "<group>"; };
+		258B0AC01A2D166D002C2E95 /* MeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeViewController.m; sourceTree = "<group>"; };
+		258B0AC21A2D1C8A002C2E95 /* MeFlightsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeFlightsTableViewController.h; sourceTree = "<group>"; };
+		258B0AC31A2D1C8A002C2E95 /* MeFlightsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeFlightsTableViewController.m; sourceTree = "<group>"; };
 		259A5E561A0837F000CF64A0 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
 		259A5E571A0837F000CF64A0 /* group-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "group-25.png"; sourceTree = "<group>"; };
 		259A5E581A0837F000CF64A0 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Contents.json; path = ../Contents.json; sourceTree = "<group>"; };
@@ -123,6 +136,8 @@
 		25ECBAA51A057A300002514B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		25ECBAA71A057A350002514B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		25ECBAAA1A057BF50002514B /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		25F1A4941A2D5290009FD39A /* MeFriendsCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeFriendsCollectionViewController.h; sourceTree = "<group>"; };
+		25F1A4951A2D5290009FD39A /* MeFriendsCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeFriendsCollectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,12 +293,22 @@
 				25ECBA661A0578070002514B /* AppDelegate.h */,
 				25ECBA671A0578070002514B /* AppDelegate.m */,
 				25ECBA6F1A0578070002514B /* Main.storyboard */,
+				25F1A4941A2D5290009FD39A /* MeFriendsCollectionViewController.h */,
+				25F1A4951A2D5290009FD39A /* MeFriendsCollectionViewController.m */,
+				256790B71A2D680700E0189C /* MeFriendsCollectionViewCell.h */,
+				256790B81A2D680700E0189C /* MeFriendsCollectionViewCell.m */,
+				258B0ABF1A2D166D002C2E95 /* MeViewController.h */,
+				258B0AC01A2D166D002C2E95 /* MeViewController.m */,
+				258B0AC21A2D1C8A002C2E95 /* MeFlightsTableViewController.h */,
+				258B0AC31A2D1C8A002C2E95 /* MeFlightsTableViewController.m */,
 				259F99D51A08C9C20047A804 /* CustomLoginViewController.h */,
 				259F99D61A08C9C20047A804 /* CustomLoginViewController.m */,
 				259F99D21A08A04E0047A804 /* FlightTableViewCell.h */,
 				259F99D31A08A04E0047A804 /* FlightTableViewCell.m */,
 				25B2092F1A0822DF00A05800 /* FriendsFlightsContentController.h */,
 				25B209301A0822DF00A05800 /* FriendsFlightsContentController.m */,
+				2534C63F1A1DC7CD00636835 /* FlightDetailViewController.h */,
+				2534C6401A1DC7CD00636835 /* FlightDetailViewController.m */,
 				25ECBA741A0578070002514B /* LaunchScreen.xib */,
 				259A5E921A0837FB00CF64A0 /* Images.xcassets */,
 				259A5E941A08387000CF64A0 /* Images */,
@@ -461,7 +486,12 @@
 			files = (
 				259F99D41A08A04E0047A804 /* FlightTableViewCell.m in Sources */,
 				259F99D71A08C9C20047A804 /* CustomLoginViewController.m in Sources */,
+				2534C6411A1DC7CD00636835 /* FlightDetailViewController.m in Sources */,
 				2534C63E1A1DB5C400636835 /* LocalFlightsViewController.m in Sources */,
+				258B0AC41A2D1C8A002C2E95 /* MeFlightsTableViewController.m in Sources */,
+				258B0AC11A2D166D002C2E95 /* MeViewController.m in Sources */,
+				25F1A4961A2D5290009FD39A /* MeFriendsCollectionViewController.m in Sources */,
+				256790B91A2D680700E0189C /* MeFriendsCollectionViewCell.m in Sources */,
 				25ECBA681A0578070002514B /* AppDelegate.m in Sources */,
 				25B209311A0822DF00A05800 /* FriendsFlightsContentController.m in Sources */,
 				257ECCF61A0864A60006C78D /* NewFlightsTableViewController.m in Sources */,
